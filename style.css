@@ -90,8 +90,12 @@ body::before {
   grid-template-columns: minmax(340px, 30%) 1fr minmax(320px, 26%);
   gap: var(--col-gap);
   height: 100vh;
+  height: 100dvh; /* mobile browsers: exclude the URL bar */
   padding: var(--col-gap);
 }
+
+/* invisible on wide screens — ledger & store sit directly in the grid */
+#lowerDeck { display: contents; }
 
 #faceCol, #ledgerCol, #storeCol {
   background: linear-gradient(180deg, rgba(33,27,21,0.92), rgba(23,19,15,0.96));
@@ -616,13 +620,59 @@ body::before {
 }
 
 /* ============ RESPONSIVE ============ */
+/* Every breakpoint keeps the whole game inside one viewport —
+   panels scroll internally, the page itself never scrolls. */
+
+/* short windows: shrink the face column's chrome so the boulder keeps room */
+@media (max-height: 700px) {
+  .tagline { display: none; }
+  .logo { font-size: 30px; }
+  #counterPlate { margin-top: 6px; padding: 4px 18px 6px; }
+  #oreCount { font-size: 24px; }
+  #buffBar { min-height: 34px; }
+}
+
+/* tablets & narrow windows: face on top, ledger + store share the bottom row */
 @media (max-width: 980px) {
-  body { overflow: auto; }
+  #game {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(0, 45fr) minmax(0, 55fr);
+  }
+  #faceCol { grid-column: 1 / -1; padding: 10px 12px; }
+  .mast-rule, .tagline { display: none; }
+  .logo { font-size: 26px; }
+  #counterPlate { margin-top: 4px; padding: 3px 18px 5px; min-width: 200px; }
+  #oreCount { font-size: 22px; }
+  #cpsCount { margin-top: 1px; }
+  #buffBar { min-height: 32px; }
+  #boulder { width: min(70%, 32vh); width: min(70%, 32dvh); }
+}
+
+/* phones: ledger & store become side-swipeable panels under the boulder
+   (the neighbour peeks in from the edge so the swipe is discoverable) */
+@media (max-width: 700px) {
+  :root { --col-gap: 8px; }
   #game {
     grid-template-columns: 1fr;
-    height: auto;
+    grid-template-rows: minmax(0, 44fr) minmax(0, 56fr);
   }
-  #faceCol { min-height: 78vh; }
-  #ledgerCol, #storeCol { min-height: 50vh; }
-  #boulder { width: min(70vw, 44vh); }
+  #lowerDeck {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 88%;
+    gap: var(--col-gap);
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    min-height: 0;
+  }
+  #ledgerCol, #storeCol { scroll-snap-align: center; }
+  #boulder { width: min(64%, 30vh); width: min(64%, 30dvh); }
+  .tab { font-size: 11px; padding: 8px 2px; letter-spacing: 0; }
+  #storeHead { padding: 8px 10px 8px; }
+  #storeHead h2 { font-size: 18px; }
+  .b-item { grid-template-columns: 44px 1fr auto; padding: 6px 8px; }
+  .b-item img { width: 40px; height: 40px; }
+  .b-owned { font-size: 20px; }
+  .toast { max-width: 240px; }
 }
