@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="geobore-timber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a6038"/>
+      <stop offset="0.55" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <linearGradient id="geobore-steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c3c9d1"/>
+      <stop offset="0.5" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#55595f"/>
+    </linearGradient>
+    <linearGradient id="geobore-iron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a8686"/>
+      <stop offset="0.6" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#3c3a38"/>
+    </linearGradient>
+    <linearGradient id="geobore-shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17130f"/>
+      <stop offset="0.55" stop-color="#241108"/>
+      <stop offset="0.85" stop-color="#a03d1c"/>
+      <stop offset="1" stop-color="#ff7847"/>
+    </linearGradient>
+    <radialGradient id="geobore-magma" cx="0.5" cy="0.95" r="0.9">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.35" stop-color="#ff7847"/>
+      <stop offset="0.7" stop-color="#7a2f14"/>
+      <stop offset="1" stop-color="#0d0b09"/>
+    </radialGradient>
+    <radialGradient id="geobore-steam" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#fff8ec" stop-opacity="0.95"/>
+      <stop offset="0.6" stop-color="#e8dcc8" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#e8dcc8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="geobore-heat" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffb545" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="geobore-cut">
+      <polygon points="26,74 102,74 96,122 32,122"/>
+    </clipPath>
+  </defs>
+
+  <!-- ground-contact shadow -->
+  <ellipse cx="64" cy="121" rx="46" ry="5.5" fill="#000" opacity="0.35"/>
+
+  <!-- ===== earth cutaway ===== -->
+  <g clip-path="url(#geobore-cut)">
+    <rect x="24" y="72" width="80" height="14" fill="#211b15"/>
+    <rect x="24" y="86" width="80" height="12" fill="#17130f"/>
+    <rect x="24" y="98" width="80" height="12" fill="#0d0b09"/>
+    <rect x="24" y="104" width="80" height="20" fill="url(#geobore-magma)"/>
+    <!-- strata seams -->
+    <line x1="24" y1="86" x2="104" y2="86" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <line x1="24" y1="98" x2="104" y2="98" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <!-- facet chips in strata -->
+    <polygon points="34,78 42,76 40,83" fill="#2c241b"/>
+    <polygon points="86,79 94,77 92,84" fill="#2c241b"/>
+    <polygon points="42,90 49,88 47,95" fill="#211b15"/>
+    <polygon points="80,92 87,90 85,96" fill="#0d0b09"/>
+    <!-- buried gems -->
+    <polygon points="36,101 41,99 43,104 38,106" fill="#3ecf8e" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="87,90 92,89 93,94 88,95" fill="#b07cff" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <!-- borehole shaft -->
+    <rect x="57" y="72" width="14" height="46" fill="url(#geobore-shaft)"/>
+    <line x1="57" y1="72" x2="57" y2="118" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <line x1="71" y1="72" x2="71" y2="118" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <!-- glowing cracks from the hot zone -->
+    <polyline points="50,122 54,114 51,108" fill="none" stroke="#ff7847" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <polyline points="78,122 75,113 79,107" fill="none" stroke="#ff7847" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+    <polyline points="38,122 42,115" fill="none" stroke="#ff7847" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+    <polyline points="90,122 87,116" fill="none" stroke="#ff7847" stroke-width="1.8" stroke-linecap="round" opacity="0.6"/>
+    <!-- drill pipe underground + bit -->
+    <rect x="61.5" y="72" width="5" height="40" fill="url(#geobore-steel)"/>
+    <polygon points="58,110 70,110 64,121" fill="url(#geobore-iron)" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <polygon points="60,110 64,110 64,118" fill="#ffb545" opacity="0.55"/>
+    <ellipse cx="64" cy="118" rx="16" ry="9" fill="url(#geobore-heat)"/>
+  </g>
+  <!-- cutaway outline -->
+  <polygon points="26,74 102,74 96,122 32,122" fill="none" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <!-- surface lip -->
+  <polygon points="20,70 108,70 102,74 26,74" fill="#2c241b" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="22" y1="70.5" x2="62" y2="70.5" stroke="#9c8f7c" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- ===== derrick tower ===== -->
+  <!-- cross braces (iron) -->
+  <g stroke="#484d54" stroke-width="2.5" stroke-linecap="round">
+    <line x1="41" y1="70" x2="83" y2="57"/>
+    <line x1="87" y1="70" x2="45" y2="57"/>
+    <line x1="45" y1="44" x2="79" y2="30"/>
+    <line x1="83" y1="44" x2="49" y2="30"/>
+  </g>
+  <!-- girts -->
+  <rect x="43" y="55" width="42" height="4" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="1.5" opacity="0.95"/>
+  <rect x="47" y="41" width="34" height="4" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="1.5" opacity="0.95"/>
+  <rect x="51" y="27" width="26" height="4" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="1.5" opacity="0.95"/>
+  <!-- legs -->
+  <polygon points="34,72 41,72 56,16 50,16" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="94,72 87,72 72,16 78,16" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="36.5" y1="69" x2="51.5" y2="18" stroke="#ffd76b" stroke-width="1.6" stroke-linecap="round" opacity="0.65"/>
+  <!-- crown platform + pulley -->
+  <rect x="48" y="9" width="32" height="8" fill="url(#geobore-timber)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="49.5" y1="10.5" x2="72" y2="10.5" stroke="#ffd76b" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="64" cy="13" r="4.5" fill="#c9973f" stroke="#0a0806" stroke-width="3"/>
+  <circle cx="64" cy="13" r="1.6" fill="#402c1b"/>
+  <path d="M60.8,10.2 A4.5,4.5 0 0 1 64,8.5" fill="none" stroke="#ffd76b" stroke-width="1.5" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- drill pipe above ground -->
+  <rect x="61.5" y="17" width="5" height="42" fill="url(#geobore-steel)" stroke="#0a0806" stroke-width="1.5"/>
+  <rect x="60" y="30" width="8" height="3.5" fill="url(#geobore-iron)" stroke="#0a0806" stroke-width="1.5"/>
+  <rect x="60" y="45" width="8" height="3.5" fill="url(#geobore-iron)" stroke="#0a0806" stroke-width="1.5"/>
+  <line x1="62.3" y1="18" x2="62.3" y2="58" stroke="#ffd76b" stroke-width="1" opacity="0.5"/>
+
+  <!-- ===== wellhead ===== -->
+  <rect x="55" y="60" width="18" height="12" fill="url(#geobore-iron)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="52" y="56" width="24" height="5.5" fill="#484d54" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <line x1="53.5" y1="57.2" x2="66" y2="57.2" stroke="#ffd76b" stroke-width="1.5" stroke-linecap="round" opacity="0.7"/>
+  <circle cx="58.5" cy="66" r="2.2" fill="#c9973f" stroke="#0a0806" stroke-width="1.5"/>
+  <circle cx="69.5" cy="66" r="2.2" fill="#c9973f" stroke="#0a0806" stroke-width="1.5"/>
+  <!-- vent pipe -->
+  <rect x="72" y="61" width="7" height="4" fill="url(#geobore-steel)" stroke="#0a0806" stroke-width="1.5"/>
+
+  <!-- ===== steam plume ===== -->
+  <g>
+    <circle cx="80" cy="57" r="5" fill="url(#geobore-steam)"/>
+    <circle cx="85" cy="49" r="7" fill="url(#geobore-steam)"/>
+    <circle cx="91" cy="39" r="9" fill="url(#geobore-steam)"/>
+    <circle cx="98" cy="27" r="8" fill="url(#geobore-steam)" opacity="0.8"/>
+    <circle cx="104" cy="17" r="6" fill="url(#geobore-steam)" opacity="0.55"/>
+    <circle cx="83" cy="47" r="3" fill="#fff8ec" opacity="0.8"/>
+    <circle cx="88" cy="37" r="3.5" fill="#fff8ec" opacity="0.7"/>
+    <circle cx="96" cy="26" r="3" fill="#fff8ec" opacity="0.5"/>
+  </g>
+</svg>

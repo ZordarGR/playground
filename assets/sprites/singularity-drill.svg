@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="singularity-drill-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#b07cff" stop-opacity="0.55"/>
+      <stop offset="0.65" stop-color="#58a6ff" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#0d0b09" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="singularity-drill-ringamethyst" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c99bff"/>
+      <stop offset="0.5" stop-color="#b07cff"/>
+      <stop offset="1" stop-color="#5b3aa0"/>
+    </linearGradient>
+    <linearGradient id="singularity-drill-ringsapphire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ec4ff"/>
+      <stop offset="0.5" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#1e3f78"/>
+    </linearGradient>
+    <linearGradient id="singularity-drill-iron" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9aa0a8"/>
+      <stop offset="0.45" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#332f2b"/>
+    </linearGradient>
+    <linearGradient id="singularity-drill-cone" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b9097"/>
+      <stop offset="0.4" stop-color="#565250"/>
+      <stop offset="1" stop-color="#26221e"/>
+    </linearGradient>
+    <linearGradient id="singularity-drill-brass" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.45" stop-color="#c9973f"/>
+      <stop offset="1" stop-color="#7c5a22"/>
+    </linearGradient>
+    <radialGradient id="singularity-drill-ember" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.5" stop-color="#ff7847" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- vortex halo -->
+  <ellipse cx="64" cy="82" rx="56" ry="34" fill="url(#singularity-drill-halo)" transform="rotate(-12 64 82)"/>
+
+  <!-- warped concentric rings, amethyst to sapphire to black -->
+  <ellipse cx="64" cy="82" rx="47" ry="27" fill="#2a1642" stroke="#0a0806" stroke-width="3" stroke-linejoin="round" transform="rotate(-12 64 82)"/>
+  <ellipse cx="63" cy="82.5" rx="39" ry="21.5" fill="url(#singularity-drill-ringamethyst)" transform="rotate(-8 63 82.5)"/>
+  <ellipse cx="64.5" cy="82" rx="31" ry="16.5" fill="#6a48b8" transform="rotate(-15 64.5 82)"/>
+  <ellipse cx="63.5" cy="82.5" rx="24" ry="12.5" fill="url(#singularity-drill-ringsapphire)" transform="rotate(-9 63.5 82.5)"/>
+  <ellipse cx="64.5" cy="83" rx="17" ry="8.5" fill="#28509c" transform="rotate(-16 64.5 83)"/>
+  <ellipse cx="64" cy="83" rx="11" ry="5.5" fill="#101426" transform="rotate(-11 64 83)"/>
+  <ellipse cx="64" cy="83.5" rx="6.5" ry="3.2" fill="#0d0b09" transform="rotate(-11 64 83.5)"/>
+
+  <!-- ring seam highlights (upper-left lantern light) -->
+  <path d="M25 74 Q40 60 62 59" fill="none" stroke="#e0c9ff" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+  <path d="M39 76 Q52 68 66 68.5" fill="none" stroke="#a8d2ff" stroke-width="1.6" stroke-linecap="round" opacity="0.7"/>
+  <path d="M104 86 Q92 100 70 99" fill="none" stroke="#3b2a66" stroke-width="2" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- light streaks pulled into the vortex -->
+  <path d="M14 66 Q36 52 58 64" fill="none" stroke="#ffd76b" stroke-width="1.8" stroke-linecap="round" opacity="0.8"/>
+  <path d="M112 74 Q98 92 74 90" fill="none" stroke="#ffb545" stroke-width="1.5" stroke-linecap="round" opacity="0.65"/>
+  <path d="M26 100 Q42 92 56 88" fill="none" stroke="#8ec4ff" stroke-width="1.4" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- rock fragments being pulled in -->
+  <g stroke="#0a0806" stroke-width="1.6" stroke-linejoin="round">
+    <path d="M17 55 L24 52 L26 58 L19 60 Z" fill="#211b15"/>
+    <path d="M18 55.5 L23.5 53 L24 56 Z" fill="#ffb545" stroke="none" opacity="0.85"/>
+    <path d="M104 58 L111 60 L109 66 L103 63 Z" fill="#17130f"/>
+    <path d="M104.5 59 L109.5 60.5 L108.5 63 Z" fill="#9c8f7c" stroke="none" opacity="0.7"/>
+    <path d="M30 106 L36 103 L39 108 L33 111 Z" fill="#211b15"/>
+    <path d="M31 106.5 L35.5 104.5 L36.5 107 Z" fill="#e8dcc8" stroke="none" opacity="0.5"/>
+    <path d="M99 102 L105 100 L107 105 L101 107 Z" fill="#17130f"/>
+  </g>
+  <path d="M28 60 Q40 66 50 72" fill="none" stroke="#9c8f7c" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M101 65 Q90 72 80 76" fill="none" stroke="#9c8f7c" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+  <path d="M39 104 Q48 98 55 92" fill="none" stroke="#9c8f7c" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- drill, boring in from upper left -->
+  <g transform="rotate(-20 64 82)">
+    <!-- top cap -->
+    <rect x="50" y="8" width="28" height="8" rx="2.5" fill="#484d54" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <rect x="52" y="9.5" width="10" height="2.5" rx="1.2" fill="#9aa0a8" opacity="0.8"/>
+    <!-- shank -->
+    <rect x="53" y="14" width="22" height="26" fill="url(#singularity-drill-iron)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <line x1="55.5" y1="16" x2="55.5" y2="38" stroke="#ffd76b" stroke-width="2" stroke-linecap="round" opacity="0.75"/>
+    <line x1="70" y1="16" x2="70" y2="38" stroke="#17130f" stroke-width="1.8" opacity="0.4"/>
+    <!-- brass collar -->
+    <rect x="48.5" y="38" width="31" height="11" rx="3" fill="url(#singularity-drill-brass)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="55" cy="43.5" r="1.8" fill="#402c1b"/>
+    <circle cx="73" cy="43.5" r="1.8" fill="#402c1b"/>
+    <line x1="50.5" y1="40" x2="63" y2="40" stroke="#ffd76b" stroke-width="1.6" stroke-linecap="round" opacity="0.9"/>
+    <!-- cone bit -->
+    <path d="M51 49 L77 49 L64 82 Z" fill="url(#singularity-drill-cone)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <!-- spiral brass flutes -->
+    <g stroke="#0a0806" stroke-width="1.6" stroke-opacity="0.4" stroke-linejoin="round">
+      <path d="M53.8 52 Q64 60 74.2 50.5 L73.2 55.5 Q64 64 54.9 56.8 Z" fill="url(#singularity-drill-brass)"/>
+      <path d="M56.9 61.5 Q64 67.5 70.9 59.8 L70 64 Q64 71 57.7 65.4 Z" fill="url(#singularity-drill-brass)"/>
+      <path d="M60 70.5 Q64 74.5 67.8 69 L67.1 72.3 Q64 77 60.7 73.6 Z" fill="url(#singularity-drill-brass)"/>
+    </g>
+    <!-- rim light on cone -->
+    <path d="M52 50 L63 78.5" fill="none" stroke="#ffd76b" stroke-width="2" stroke-linecap="round" opacity="0.85"/>
+    <!-- shadow facet on cone right -->
+    <path d="M72 52 L76 49.5 L64.6 79.5 Z" fill="#0d0b09" opacity="0.45"/>
+  </g>
+
+  <!-- impact glow where the bit meets the singularity -->
+  <ellipse cx="64" cy="83" rx="14" ry="8" fill="url(#singularity-drill-ember)"/>
+  <path d="M56 87 Q50 91 46 90" fill="none" stroke="#ff7847" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+  <path d="M72 87.5 Q78 91 82 89.5" fill="none" stroke="#ffb545" stroke-width="1.6" stroke-linecap="round" opacity="0.8"/>
+  <circle cx="53" cy="89" r="1.3" fill="#ffd76b"/>
+  <circle cx="76" cy="90" r="1.1" fill="#ff7847"/>
+  <!-- front lip of vortex passing over the tip -->
+  <path d="M50 88 Q64 95 78 87.5 Q72 93.5 64 94 Q56 93.5 50 88 Z" fill="#0d0b09" opacity="0.9"/>
+</svg>

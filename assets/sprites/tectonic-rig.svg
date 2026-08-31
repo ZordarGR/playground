@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="tectonic-rig-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.45" stop-color="#ff7847" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tectonic-rig-crack" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.55" stop-color="#ffb545"/>
+      <stop offset="1" stop-color="#ff7847"/>
+    </linearGradient>
+    <linearGradient id="tectonic-rig-rockl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a2219"/>
+      <stop offset="0.5" stop-color="#211b15"/>
+      <stop offset="1" stop-color="#0d0b09"/>
+    </linearGradient>
+    <linearGradient id="tectonic-rig-rockr" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#211b15"/>
+      <stop offset="0.5" stop-color="#17130f"/>
+      <stop offset="1" stop-color="#0d0b09"/>
+    </linearGradient>
+    <linearGradient id="tectonic-rig-iron" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa0a8"/>
+      <stop offset="0.55" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+    <linearGradient id="tectonic-rig-steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9ccd1"/>
+      <stop offset="0.5" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+    <linearGradient id="tectonic-rig-brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="1" stop-color="#c9973f"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ground contact shadow -->
+  <ellipse cx="64" cy="114" rx="48" ry="7" fill="#000" opacity="0.35"/>
+
+  <!-- molten glow radiating from the fault -->
+  <circle cx="64" cy="82" r="42" fill="url(#tectonic-rig-glow)"/>
+
+  <!-- LEFT rock face -->
+  <polygon points="6,112 4,62 8,34 18,24 30,20 38,22 38,58 44,76 52,96 54,112"
+           fill="url(#tectonic-rig-rockl)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="8,34 18,24 30,20 38,22 30,32 14,40" fill="#3a2f22" opacity="0.9"
+           stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <polygon points="4,62 14,40 30,32 26,58 12,70 6,90" fill="#211b15"
+           stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <polygon points="6,90 12,70 26,58 34,84 30,104 20,110 6,112" fill="#17130f"
+           stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <!-- crack-light on left inner face -->
+  <polygon points="38,26 38,58 44,76 52,96 54,112 47,110 39,88 34,62 34,32" fill="#ff7847" opacity="0.4"/>
+  <polygon points="38,44 41,60 46,78 52,98 54,112 50,111 43,90 37,66 36,46" fill="#ffb545" opacity="0.45"/>
+  <!-- lantern rim light upper-left -->
+  <path d="M8,34 L18,24 L30,20 L38,22" fill="none" stroke="#ffd76b" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+  <path d="M4,62 L8,34" fill="none" stroke="#ffb545" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- RIGHT rock face (shadow side) -->
+  <polygon points="122,112 124,62 120,34 110,24 98,20 90,22 90,58 84,76 76,96 74,112"
+           fill="url(#tectonic-rig-rockr)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="120,34 110,24 98,20 90,22 98,32 114,42" fill="#211b15"
+           stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <polygon points="124,62 114,42 98,32 102,60 116,74 122,92" fill="#0d0b09"
+           stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4" stroke-linejoin="round"/>
+  <!-- crack-light on right inner face -->
+  <polygon points="90,26 90,58 84,76 76,96 74,112 81,110 89,88 94,62 94,32" fill="#ff7847" opacity="0.35"/>
+  <polygon points="90,46 87,64 82,82 76,100 74,112 78,111 85,90 91,68 92,48" fill="#ffb545" opacity="0.35"/>
+  <path d="M110,24 L98,20 L90,22" fill="none" stroke="#ffb545" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+
+  <!-- glowing crack core -->
+  <polygon points="59,50 69,50 66,64 71,80 63,96 67,112 59,112 62,94 57,78 62,64"
+           fill="url(#tectonic-rig-crack)"/>
+  <polygon points="62,54 66,54 64,68 67,82 62,96 64,112 61,112 62,92 60,78 63,66" fill="#ffd76b" opacity="0.9"/>
+  <!-- branching fissures -->
+  <path d="M44,70 L52,74 M84,72 L78,78 M50,92 L56,94" fill="none" stroke="#ff7847" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+
+  <!-- LEFT pressure plate -->
+  <polygon points="38,16 46,18 46,58 38,56" fill="url(#tectonic-rig-iron)"
+           stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="38,16 41,17 41,56 38,56" fill="#c9ccd1" opacity="0.55"/>
+  <circle cx="42.5" cy="24" r="1.7" fill="#c9973f"/>
+  <circle cx="42.5" cy="37" r="1.7" fill="#c9973f"/>
+  <circle cx="42.5" cy="50" r="1.7" fill="#c9973f"/>
+
+  <!-- RIGHT pressure plate -->
+  <polygon points="90,16 82,18 82,58 90,56" fill="url(#tectonic-rig-iron)"
+           stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="82,18 85,17.5 85,57 82,58" fill="#484d54" opacity="0.7"/>
+  <circle cx="85.5" cy="24" r="1.7" fill="#c9973f"/>
+  <circle cx="85.5" cy="37" r="1.7" fill="#c9973f"/>
+  <circle cx="85.5" cy="50" r="1.7" fill="#c9973f"/>
+
+  <!-- piston arms -->
+  <rect x="44" y="27" width="12" height="8" fill="url(#tectonic-rig-steel)"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="72" y="27" width="12" height="8" fill="url(#tectonic-rig-steel)"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <!-- brass collars -->
+  <rect x="51" y="24.5" width="5" height="13" fill="url(#tectonic-rig-brass)"
+        stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="72" y="24.5" width="5" height="13" fill="url(#tectonic-rig-brass)"
+        stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- splitting wedge under the column -->
+  <polygon points="57,46 71,46 64,62" fill="url(#tectonic-rig-iron)"
+           stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <polygon points="57,46 64,46 64,58" fill="#c9ccd1" opacity="0.35"/>
+
+  <!-- central column -->
+  <rect x="54" y="10" width="20" height="38" fill="url(#tectonic-rig-iron)"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="54" y="10" width="4" height="38" fill="#c9ccd1" opacity="0.4"/>
+  <!-- warning stripe band -->
+  <rect x="55.5" y="13.5" width="17" height="8.5" fill="#17130f" stroke="#0a0806" stroke-width="1.5" stroke-opacity="0.4"/>
+  <polygon points="55.5,22 59.5,13.5 64,13.5 60,22" fill="#ffb545"/>
+  <polygon points="65,22 69,13.5 72.5,13.5 72.5,17 70,22" fill="#ffb545"/>
+  <!-- gauge / glowing accent -->
+  <circle cx="64" cy="31" r="4.5" fill="#402c1b" stroke="#0a0806" stroke-width="2"/>
+  <circle cx="64" cy="31" r="2.6" fill="#ff7847"/>
+  <circle cx="63" cy="30" r="1.1" fill="#ffd76b"/>
+  <!-- column rivets -->
+  <circle cx="57.5" cy="41" r="1.4" fill="#c9973f"/>
+  <circle cx="64" cy="41" r="1.4" fill="#c9973f"/>
+  <circle cx="70.5" cy="41" r="1.4" fill="#c9973f"/>
+  <!-- top cap -->
+  <rect x="50" y="5" width="28" height="7" rx="1.5" fill="#484d54"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="50" y="5" width="28" height="2.5" rx="1" fill="#9aa0a8" opacity="0.7"/>
+  <path d="M51,5.5 L64,5.5" fill="none" stroke="#ffd76b" stroke-width="2" stroke-linecap="round" opacity="0.9"/>
+
+  <!-- debris stones -->
+  <polygon points="14,108 20,102 27,105 25,112 15,112" fill="#211b15"
+           stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="14,108 20,102 22,106 17,109" fill="#3a2f22"/>
+  <polygon points="102,106 109,102 115,106 112,112 103,112" fill="#17130f"
+           stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <polygon points="102,106 109,102 108,107" fill="#ff7847" opacity="0.45"/>
+</svg>

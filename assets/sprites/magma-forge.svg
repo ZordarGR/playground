@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <radialGradient id="magma-forge-pool" cx="0.5" cy="0.5" r="0.6">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.35" stop-color="#ff7847"/>
+      <stop offset="0.8" stop-color="#c9401f"/>
+      <stop offset="1" stop-color="#6e1c0c"/>
+    </radialGradient>
+    <radialGradient id="magma-forge-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff7847" stop-opacity="0.55"/>
+      <stop offset="0.6" stop-color="#ff7847" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="magma-forge-basalt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#484d54"/>
+      <stop offset="0.55" stop-color="#211b15"/>
+      <stop offset="1" stop-color="#3a1a0e"/>
+    </linearGradient>
+    <linearGradient id="magma-forge-anviltop" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa0a8"/>
+      <stop offset="0.5" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+    <linearGradient id="magma-forge-anvilbody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6e6a6a"/>
+      <stop offset="0.55" stop-color="#484d54"/>
+      <stop offset="1" stop-color="#7a3a22"/>
+    </linearGradient>
+    <linearGradient id="magma-forge-ingot" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.5" stop-color="#ffb545"/>
+      <stop offset="1" stop-color="#ff7847"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ambient magma glow behind everything -->
+  <ellipse cx="64" cy="98" rx="58" ry="34" fill="url(#magma-forge-glow)"/>
+
+  <!-- ground-contact shadow -->
+  <ellipse cx="64" cy="112" rx="46" ry="9" fill="#000" opacity="0.35"/>
+
+  <!-- magma pool -->
+  <ellipse cx="64" cy="106" rx="48" ry="13" fill="#17130f" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="64" cy="104" rx="44" ry="11" fill="url(#magma-forge-pool)"/>
+  <!-- crusted basalt plates floating on magma -->
+  <path d="M24 104 L34 100 L42 104 L33 108 Z" fill="#211b15" opacity="0.9"/>
+  <path d="M88 100 L100 102 L104 106 L92 108 Z" fill="#211b15" opacity="0.9"/>
+  <path d="M52 110 L64 108 L74 111 L62 113 Z" fill="#17130f" opacity="0.8"/>
+  <!-- hot cracks in crust -->
+  <path d="M30 104 L37 103" stroke="#ffd76b" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  <path d="M93 103 L99 105" stroke="#ffb545" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+  <!-- magma surface highlights -->
+  <ellipse cx="52" cy="101" rx="10" ry="2.6" fill="#ffd76b" opacity="0.85"/>
+  <ellipse cx="80" cy="105" rx="7" ry="2" fill="#ffb545" opacity="0.7"/>
+
+  <!-- basalt pedestal -->
+  <path d="M40 108 L44 76 L84 76 L88 108 Z" fill="url(#magma-forge-basalt)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <!-- pedestal facets -->
+  <path d="M44 76 L52 76 L48 108 L40 108 Z" fill="#484d54" opacity="0.5"/>
+  <path d="M76 76 L84 76 L88 108 L80 108 Z" fill="#0d0b09" opacity="0.6"/>
+  <path d="M56 76 L64 76 L62 108 L52 108 Z" fill="#17130f" opacity="0.45"/>
+  <!-- magma underlight on pedestal base -->
+  <path d="M41 105 L87 105 L88 108 L40 108 Z" fill="#ff7847" opacity="0.75"/>
+  <path d="M42 99 L86 99 L86.6 102 L41.6 102 Z" fill="#ff7847" opacity="0.35"/>
+  <!-- glowing cracks in pedestal -->
+  <path d="M50 108 L53 96 L50 88" stroke="#ffb545" stroke-width="2" fill="none" opacity="0.9" stroke-linecap="round"/>
+  <path d="M74 108 L71 98 L75 90" stroke="#ff7847" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round"/>
+  <path d="M62 108 L63 100" stroke="#ffd76b" stroke-width="1.5" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <!-- lantern rim on pedestal upper-left -->
+  <path d="M44 76 L84 76 L83 79 L45 79 Z" fill="#9c8f7c" opacity="0.5"/>
+  <path d="M44 76 L56 76 L55 78 L45 78.5 Z" fill="#ffd76b" opacity="0.6"/>
+
+  <!-- anvil waist -->
+  <path d="M56 62 L72 62 L76 76 L52 76 Z" fill="url(#magma-forge-anvilbody)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M56 62 L61 62 L58 76 L52 76 Z" fill="#9aa0a8" opacity="0.35"/>
+  <path d="M68 62 L72 62 L76 76 L71 76 Z" fill="#0d0b09" opacity="0.5"/>
+  <!-- underlight kiss on waist base -->
+  <path d="M52.6 73 L75.4 73 L76 76 L52 76 Z" fill="#ff7847" opacity="0.5"/>
+
+  <!-- anvil body: horn + face block -->
+  <path d="M22 42 Q34 36 44 40 L44 52 Q33 54 26 50 Q21 47 22 42 Z" fill="url(#magma-forge-anvilbody)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 38 L96 38 Q102 38 102 44 L102 56 Q102 62 96 62 L48 62 Q42 62 42 56 Z" fill="url(#magma-forge-anvilbody)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <!-- anvil top face -->
+  <path d="M40 38 L96 38 Q102 38 102 44 L102 46 L41 46 Z" fill="url(#magma-forge-anviltop)"/>
+  <!-- facet seams -->
+  <path d="M41 46 L102 46" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <path d="M60 46 L58 62" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <path d="M84 46 L86 62" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <!-- lantern rim-light upper-left of anvil -->
+  <path d="M40 38 L70 38 L69 41 L42 41 Z" fill="#ffd76b" opacity="0.75"/>
+  <path d="M24 42 Q33 37.5 43 40.5 L42.5 43 Q33 40.5 26 44 Z" fill="#ffb545" opacity="0.6"/>
+  <!-- magma underlight on anvil underside -->
+  <path d="M44 59 L100 59 Q101 60.5 99 62 L48 62 Q45 61.5 44 59 Z" fill="#ff7847" opacity="0.6"/>
+  <path d="M26 49 Q33 52.5 44 51 L44 52 Q33 54 26 50 Z" fill="#ffb545" opacity="0.6"/>
+  <!-- hardy hole -->
+  <rect x="90" y="40" width="6" height="4" rx="1" fill="#0d0b09"/>
+
+  <!-- glowing hot ingot on the face -->
+  <path d="M56 28 L82 28 L86 38 L52 38 Z" fill="url(#magma-forge-ingot)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M58 30 L79 30 L81 33 L57 33 Z" fill="#ffefb0" opacity="0.85"/>
+  <path d="M53.5 35 L84.8 35 L86 38 L52 38 Z" fill="#ff5d73" opacity="0.5"/>
+  <ellipse cx="69" cy="33" rx="20" ry="9" fill="url(#magma-forge-glow)"/>
+
+  <!-- heat shimmer strokes above ingot -->
+  <path d="M60 24 Q62 20 60 16 Q58 12 60 8" stroke="#ffb545" stroke-width="2" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M69 25 Q71.5 21 69 16.5 Q66.5 12 69 7" stroke="#ffd76b" stroke-width="2" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <path d="M78 24 Q80 20 78 16 Q76 12.5 78 9" stroke="#ff7847" stroke-width="2" fill="none" opacity="0.65" stroke-linecap="round"/>
+
+  <!-- floating spark motes -->
+  <circle cx="34" cy="88" r="2.2" fill="#ffd76b"/>
+  <circle cx="29" cy="72" r="1.5" fill="#ffb545" opacity="0.9"/>
+  <circle cx="97" cy="84" r="2" fill="#ff7847"/>
+  <circle cx="103" cy="68" r="1.4" fill="#ffb545" opacity="0.85"/>
+  <circle cx="90" cy="22" r="1.6" fill="#ffd76b" opacity="0.9"/>
+  <circle cx="49" cy="18" r="1.3" fill="#ffb545" opacity="0.8"/>
+  <circle cx="108" cy="48" r="1.2" fill="#ff7847" opacity="0.75"/>
+  <circle cx="20" cy="58" r="1.3" fill="#ffd76b" opacity="0.7"/>
+</svg>

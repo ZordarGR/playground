@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="pickaxe-steel" gradientUnits="userSpaceOnUse" x1="14" y1="16" x2="70" y2="60">
+      <stop offset="0" stop-color="#9aa0a8"/>
+      <stop offset="0.55" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#3a3e44"/>
+    </linearGradient>
+    <linearGradient id="pickaxe-steel-light" gradientUnits="userSpaceOnUse" x1="12" y1="14" x2="60" y2="50">
+      <stop offset="0" stop-color="#e8ecf0"/>
+      <stop offset="0.55" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#767c84"/>
+    </linearGradient>
+    <linearGradient id="pickaxe-steel-dark" gradientUnits="userSpaceOnUse" x1="36" y1="32" x2="50" y2="48">
+      <stop offset="0" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#2c2f34"/>
+    </linearGradient>
+    <linearGradient id="pickaxe-wood" gradientUnits="userSpaceOnUse" x1="52" y1="36" x2="40" y2="50">
+      <stop offset="0" stop-color="#8a6038"/>
+      <stop offset="0.55" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <linearGradient id="pickaxe-brass" gradientUnits="userSpaceOnUse" x1="48" y1="44" x2="60" y2="57">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.5" stop-color="#c9973f"/>
+      <stop offset="1" stop-color="#7a5620"/>
+    </linearGradient>
+    <radialGradient id="pickaxe-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd76b" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#ff7847" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground contact shadow -->
+  <ellipse cx="62" cy="117" rx="42" ry="6.5" fill="#000" opacity="0.35"/>
+
+  <!-- spark glow behind the point -->
+  <circle cx="11" cy="70" r="15" fill="url(#pickaxe-glow)" opacity="0.85"/>
+
+  <!-- hickory handle -->
+  <path d="M 42.5 44.9 L 49.5 39.1 L 107 108 L 100.5 114.5 Z"
+        fill="url(#pickaxe-wood)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M 48 42.5 L 100 106" stroke="#3a2718" stroke-width="1.3" opacity="0.55" fill="none"/>
+  <path d="M 44.5 46.5 L 97 110" stroke="#3a2718" stroke-width="1.3" opacity="0.45" fill="none"/>
+  <path d="M 50 40.5 L 102 103.5" stroke="#ffb545" stroke-width="1.6" opacity="0.5" fill="none" stroke-linecap="round"/>
+
+  <!-- timber butt cap -->
+  <path d="M 95.3 109 L 102.7 102.8 L 107 108 L 100.5 114.5 Z"
+        fill="#402c1b" stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- brass ferrule -->
+  <path d="M 46.9 51.7 L 55.3 44.7 L 60.4 50.9 L 51.9 57.9 Z"
+        fill="url(#pickaxe-brass)" stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M 47.8 51 L 55.4 45.6" stroke="#ffd76b" stroke-width="1.5" opacity="0.85" fill="none" stroke-linecap="round"/>
+
+  <!-- forged steel head: silhouette -->
+  <path d="M 10 71 Q 16 18 82 13 Q 44 48 10 71 Z"
+        fill="url(#pickaxe-steel)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- bright outer facet band (upper-left light) -->
+  <path d="M 10 71 Q 16 18 82 13 Q 34 28 10 71 Z" fill="url(#pickaxe-steel-light)"/>
+
+  <!-- dark inner facet band (lower-right shadow) -->
+  <path d="M 82 13 Q 44 48 10 71 Q 26 54 46 40 Q 66 26 82 13 Z" fill="#17130f" opacity="0.72"/>
+
+  <!-- facet seams -->
+  <path d="M 40 38 L 74 17" stroke="#0a0806" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <path d="M 38 40 L 16 62" stroke="#0a0806" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <path d="M 30 31 Q 44 24 62 19" stroke="#0a0806" stroke-width="1.5" opacity="0.35" fill="none"/>
+
+  <!-- amber rim light along outer edge -->
+  <path d="M 12 64 Q 15 30 44 19" stroke="#ffd76b" stroke-width="2.5" opacity="0.9" fill="none" stroke-linecap="round"/>
+  <path d="M 58 16 Q 70 14 79 13.5" stroke="#ffb545" stroke-width="2" opacity="0.75" fill="none" stroke-linecap="round"/>
+
+  <!-- eye boss with rivets -->
+  <path d="M 42.1 30.8 L 51.1 41.6 L 41.9 49.2 L 32.9 38.4 Z"
+        fill="url(#pickaxe-steel-dark)" stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <circle cx="39.5" cy="37" r="2" fill="#c9973f" stroke="#0a0806" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="44.5" cy="43" r="2" fill="#c9973f" stroke="#0a0806" stroke-width="1" stroke-opacity="0.6"/>
+  <circle cx="38.8" cy="36.3" r="0.8" fill="#ffd76b"/>
+  <circle cx="43.8" cy="42.3" r="0.8" fill="#ffd76b"/>
+
+  <!-- amber glint on the point -->
+  <path d="M 10 71 L 16.5 58.5 L 19.5 66.5 Z" fill="#ffb545" opacity="0.9"/>
+  <path d="M 10 71 L 14 62" stroke="#ffd76b" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- spark motes -->
+  <circle cx="5.5" cy="63" r="1.8" fill="#ffd76b"/>
+  <circle cx="16" cy="79" r="1.4" fill="#ffb545"/>
+  <circle cx="3.5" cy="74" r="1.2" fill="#ff7847"/>
+  <path d="M 12 56.5 L 14 59.5 L 12 62.5 L 10 59.5 Z" fill="#ffd76b"/>
+</svg>
