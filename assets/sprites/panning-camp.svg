@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="panning-camp-steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9ccd2"/>
+      <stop offset="0.45" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+    <linearGradient id="panning-camp-steel-inner" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#33373c"/>
+    </linearGradient>
+    <radialGradient id="panning-camp-water" cx="0.42" cy="0.38" r="0.75">
+      <stop offset="0" stop-color="#7db8ff"/>
+      <stop offset="0.5" stop-color="#58a6ff"/>
+      <stop offset="1" stop-color="#1c3a63"/>
+    </radialGradient>
+    <linearGradient id="panning-camp-tent" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#f2e6cc"/>
+      <stop offset="0.55" stop-color="#d8c9a8"/>
+      <stop offset="1" stop-color="#b5a483"/>
+    </linearGradient>
+    <linearGradient id="panning-camp-tent-shade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9a988"/>
+      <stop offset="1" stop-color="#8b7d63"/>
+    </linearGradient>
+    <linearGradient id="panning-camp-timber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a6238"/>
+      <stop offset="0.5" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <radialGradient id="panning-camp-goldglow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd76b" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#ffb545" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#ffb545" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground contact shadow -->
+  <ellipse cx="64" cy="112" rx="46" ry="8.5" fill="#000" opacity="0.35"/>
+
+  <!-- ===== tent (behind) ===== -->
+  <g>
+    <path d="M40 19 L9 81 L75 81 Z" fill="url(#panning-camp-tent)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M40 19 L40 81 L75 81 Z" fill="url(#panning-camp-tent-shade)"/>
+    <!-- lit upper-left edge -->
+    <path d="M40 19 L13 73" fill="none" stroke="#ffd76b" stroke-width="2.5" stroke-linecap="round" opacity="0.85"/>
+    <!-- canvas seams -->
+    <path d="M33 34 L21 58 M40 30 L40 60" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.35"/>
+    <!-- opening with warm glow inside -->
+    <path d="M40 36 L29 81 L51 81 Z" fill="#17130f" stroke="#0a0806" stroke-width="1.8" stroke-linejoin="round" opacity="0.95"/>
+    <path d="M40 46 L34 74 L46 74 Z" fill="#ff7847" opacity="0.55"/>
+    <!-- flap folded back -->
+    <path d="M40 36 L51 81 L44 79 Z" fill="#c4b391" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round" opacity="0.9"/>
+    <!-- pole tip -->
+    <path d="M38 21 L40 12 L42 21 Z" fill="url(#panning-camp-timber)" stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  </g>
+
+  <!-- guy rope to stake -->
+  <path d="M42 24 Q80 44 103 68" fill="none" stroke="#e8dcc8" stroke-width="1.8" opacity="0.85"/>
+  <path d="M42 24 Q80 44 103 68" fill="none" stroke="#0a0806" stroke-width="1.8" opacity="0.3" transform="translate(0.7 0.9)"/>
+
+  <!-- wooden stake -->
+  <g>
+    <path d="M98 66 L109 69 L108 88 L104 100 L99 86 Z" fill="url(#panning-camp-timber)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M98 66 L102 67.2 L102.6 88 L99 86 Z" fill="#ffb545" opacity="0.45"/>
+    <path d="M104 69 L104.5 90" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  </g>
+
+  <!-- ===== pan ===== -->
+  <g transform="rotate(-12 66 88)">
+    <!-- outer rim -->
+    <ellipse cx="66" cy="88" rx="46" ry="26" fill="url(#panning-camp-steel)" stroke="#0a0806" stroke-width="3"/>
+    <!-- inner sloped wall -->
+    <ellipse cx="66" cy="89" rx="38.5" ry="20.5" fill="url(#panning-camp-steel-inner)"/>
+    <ellipse cx="66" cy="89" rx="38.5" ry="20.5" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <!-- riffle notches on wall -->
+    <path d="M31 82 L36 85 M36 76 L41 80 M44 72 L47 77 M96 96 L91 93 M90 101 L86 97" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+    <!-- water -->
+    <ellipse cx="66" cy="90" rx="32" ry="16" fill="url(#panning-camp-water)" stroke="#0a0806" stroke-width="1.8" opacity="0.98"/>
+    <!-- swirl -->
+    <path d="M44 90 A22 10 0 0 1 84 85" fill="none" stroke="#9cc8ff" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+    <path d="M54 95 A14 6 0 0 1 78 92" fill="none" stroke="#cfe4ff" stroke-width="2" stroke-linecap="round" opacity="0.55"/>
+    <path d="M60 86 A8 3.5 0 0 0 73 88" fill="none" stroke="#2b5f9e" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+    <!-- gold glow + nuggets at bottom edge of water -->
+    <ellipse cx="70" cy="99" rx="18" ry="8" fill="url(#panning-camp-goldglow)"/>
+    <path d="M58 100 L61 96.5 L65 99.5 L62 102.5 Z" fill="#ffd76b" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M66 101 L70 97.5 L75 100 L71 104 Z" fill="#ffb545" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M76 98 L80 95.5 L83.5 98.5 L79.5 101 Z" fill="#ffd76b" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="64" cy="97" r="1.4" fill="#ffd76b"/>
+    <circle cx="74" cy="103" r="1.2" fill="#ffb545"/>
+    <circle cx="83" cy="101" r="1.3" fill="#ffd76b"/>
+    <circle cx="55" cy="103" r="1.1" fill="#c9973f"/>
+    <!-- amber rim light, upper-left -->
+    <path d="M23 79 A46 26 0 0 1 66 62 A46 26 0 0 1 92 66" fill="none" stroke="#ffd76b" stroke-width="3" stroke-linecap="round" opacity="0.85"/>
+    <path d="M31 74 A38.5 20.5 0 0 1 66 68.5" fill="none" stroke="#ffb545" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+    <!-- deep shadow lower-right of rim -->
+    <path d="M100 98 A46 26 0 0 1 72 113.6" fill="none" stroke="#0a0806" stroke-width="2.5" stroke-linecap="round" opacity="0.45"/>
+  </g>
+
+  <!-- gold glints -->
+  <g fill="#ffd76b">
+    <path d="M97 52 L98.6 57.4 L104 59 L98.6 60.6 L97 66 L95.4 60.6 L90 59 L95.4 57.4 Z"/>
+    <path d="M34 96 L35.2 99.8 L39 101 L35.2 102.2 L34 106 L32.8 102.2 L29 101 L32.8 99.8 Z"/>
+    <path d="M84 40 L84.9 42.8 L87.7 43.7 L84.9 44.6 L84 47.4 L83.1 44.6 L80.3 43.7 L83.1 42.8 Z" fill="#ffb545"/>
+    <circle cx="103" cy="47" r="1.4" opacity="0.8"/>
+    <circle cx="26" cy="90" r="1.2" opacity="0.8"/>
+  </g>
+</svg>

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="prospector-hat" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8a6039"/>
+      <stop offset="0.5" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <linearGradient id="prospector-brim" x1="0" y1="0" x2="1" y2="0.6">
+      <stop offset="0" stop-color="#7d5735"/>
+      <stop offset="0.55" stop-color="#5a3d26"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <linearGradient id="prospector-skin" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8cfa0"/>
+      <stop offset="0.55" stop-color="#d8c9a8"/>
+      <stop offset="1" stop-color="#a98f68"/>
+    </linearGradient>
+    <linearGradient id="prospector-beard" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#e8dcc8"/>
+      <stop offset="0.5" stop-color="#c4b7a0"/>
+      <stop offset="1" stop-color="#9c8f7c"/>
+    </linearGradient>
+    <linearGradient id="prospector-jacket" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b4a2f"/>
+      <stop offset="0.6" stop-color="#4c3421"/>
+      <stop offset="1" stop-color="#2e1f12"/>
+    </linearGradient>
+    <linearGradient id="prospector-kerchief" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a8c"/>
+      <stop offset="0.45" stop-color="#ff5d73"/>
+      <stop offset="1" stop-color="#a8323f"/>
+    </linearGradient>
+    <linearGradient id="prospector-handle" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#402c1b"/>
+      <stop offset="0.5" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#8a6039"/>
+    </linearGradient>
+    <linearGradient id="prospector-steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c6ccd4"/>
+      <stop offset="0.5" stop-color="#9aa0a8"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+    <linearGradient id="prospector-brass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ecc069"/>
+      <stop offset="0.5" stop-color="#c9973f"/>
+      <stop offset="1" stop-color="#7d5a22"/>
+    </linearGradient>
+    <radialGradient id="prospector-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd76b" stop-opacity="0.85"/>
+      <stop offset="0.45" stop-color="#ffb545" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#ffb545" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="prospector-flame" cx="0.5" cy="0.7" r="0.7">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset="0.45" stop-color="#ffd76b"/>
+      <stop offset="0.8" stop-color="#ffb545"/>
+      <stop offset="1" stop-color="#ff7847"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ground contact shadow -->
+  <ellipse cx="64" cy="117" rx="42" ry="8" fill="#000" opacity="0.35"/>
+
+  <!-- pickaxe over shoulder (behind bust) -->
+  <g>
+    <path d="M78 118 L86 120 L111 42 L103 39 Z" fill="url(#prospector-handle)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M85 33 C95 24 113 24 123 36 C118 32 112 31 107 33 L98 42 C96 45 93 45 90 43 C87 41 86 38 87 35 Z" fill="url(#prospector-steel)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M88 32 C96 26 106 25 114 29 L108 32 C102 30 95 31 90 35 Z" fill="#c6ccd4" opacity="0.7"/>
+    <path d="M103 39 L107 33 L111 42 L106 44 Z" fill="#484d54" opacity="0.6"/>
+  </g>
+
+  <!-- shoulders / jacket -->
+  <path d="M20 120 C21 102 30 92 44 87 L84 87 C98 92 107 102 108 120 Z" fill="url(#prospector-jacket)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M22 118 C24 103 31 95 42 90 L48 92 C38 98 32 106 30 118 Z" fill="#ffb545" opacity="0.35"/>
+  <path d="M84 87 C98 92 107 102 108 120 L96 120 C95 105 90 95 80 90 Z" fill="#1c130a" opacity="0.6"/>
+  <path d="M44 87 L46 120 M84 87 L82 120" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- red neckerchief -->
+  <path d="M44 87 C50 94 58 97 64 97 C70 97 78 94 84 87 L76 108 C72 114 56 114 52 108 Z" fill="url(#prospector-kerchief)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M47 89 C52 94 58 96 63 96 L58 106 C54 104 50 97 47 89 Z" fill="#ff9aa6" opacity="0.55"/>
+  <path d="M64 97 L70 107 L64 111 L58 107 Z" fill="#a8323f" stroke="#0a0806" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- beard -->
+  <path d="M38 56 C33 74 34 94 46 104 C52 109 58 110 64 110 C70 110 76 109 82 104 C94 94 95 74 90 56 L78 62 L64 60 L50 62 Z" fill="url(#prospector-beard)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 60 C37 76 39 92 48 100 C44 88 43 72 46 62 Z" fill="#f4ecd9" opacity="0.8"/>
+  <path d="M88 58 C92 76 90 92 80 102 C86 90 87 72 84 62 Z" fill="#7c705e" opacity="0.7"/>
+  <path d="M56 66 C55 80 56 92 60 102 M72 66 C73 80 72 92 68 102" fill="none" stroke="#7c705e" stroke-width="1.5" opacity="0.4"/>
+  <path d="M64 104 C58 104 52 101 49 96 C54 100 60 101 64 101 C68 101 74 100 79 96 C76 101 70 104 64 104 Z" fill="#867a66" opacity="0.5"/>
+
+  <!-- face -->
+  <path d="M42 46 C42 58 48 64 56 66 L72 66 C80 64 86 58 86 46 Z" fill="url(#prospector-skin)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M43 47 C44 54 47 59 52 62 L48 48 Z" fill="#ffd76b" opacity="0.45"/>
+  <!-- brim shadow on face -->
+  <path d="M42 46 L86 46 L85 51 L43 51 Z" fill="#402c1b" opacity="0.35"/>
+  <!-- brows -->
+  <path d="M47 53 C50 51 55 51 58 53 L58 56 C55 54 50 54 47 55 Z" fill="#e8dcc8" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round" opacity="0.95"/>
+  <path d="M70 53 C73 51 78 51 81 53 L81 55 C78 54 73 54 70 56 Z" fill="#e8dcc8" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round" opacity="0.95"/>
+  <!-- kind eyes -->
+  <path d="M49 58 C51 56.5 55 56.5 57 58 C55 60.5 51 60.5 49 58 Z" fill="#17130f"/>
+  <path d="M71 58 C73 56.5 77 56.5 79 58 C77 60.5 73 60.5 71 58 Z" fill="#17130f"/>
+  <circle cx="51.5" cy="57.6" r="0.9" fill="#ffd76b" opacity="0.9"/>
+  <circle cx="73.5" cy="57.6" r="0.9" fill="#ffd76b" opacity="0.9"/>
+  <!-- crow's feet -->
+  <path d="M46 59 L43 58 M46 61 L44 61" stroke="#a98f68" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <path d="M82 59 L85 58 M82 61 L84 61" stroke="#a98f68" stroke-width="1.5" fill="none" opacity="0.7"/>
+  <!-- weathered cheeks -->
+  <path d="M47 62 C49 64 52 65 54 65 L53 67 C50 66 48 64 47 62 Z" fill="#c98d6a" opacity="0.5"/>
+  <path d="M81 62 C79 64 76 65 74 65 L75 67 C78 66 80 64 81 62 Z" fill="#b57854" opacity="0.5"/>
+  <!-- nose -->
+  <path d="M60 58 C59 64 58 67 56 69 C58 73 62 74 64 74 C66 74 70 73 72 69 C70 67 69 64 68 58 Z" fill="url(#prospector-skin)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60.5 60 C60 65 59 68 58 69.5 C59.5 71.5 61 72 62 72.2 L61.5 63 Z" fill="#f2dcae" opacity="0.75"/>
+  <path d="M68 60 C68.6 65 69.5 68 70.8 69.6 C69.5 71.4 68 72 67 72.2 L67.5 63 Z" fill="#a97b52" opacity="0.55"/>
+  <!-- mustache -->
+  <path d="M52 70 C56 67 60 66.5 64 71 C68 66.5 72 67 76 70 C78 74 74 78 68 78 L60 78 C54 78 50 74 52 70 Z" fill="#e8dcc8" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M54 71 C57 69 60 68.8 63 71.5 L62 75 C58 75 55 73.5 54 71 Z" fill="#f7f0df" opacity="0.85"/>
+  <path d="M74 71 C71 69 68 68.8 65 71.5 L66 75 C70 75 73 73.5 74 71 Z" fill="#b3a68f" opacity="0.6"/>
+
+  <!-- hat brim -->
+  <path d="M14 43 C24 36 44 33 64 33 C84 33 104 36 114 43 C116 46 114 50 110 50 C96 46 80 45 64 45 C48 45 32 46 18 50 C14 50 12 46 14 43 Z" fill="url(#prospector-brim)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M16 43 C26 37.5 42 35 58 34.5 L57 38 C43 38.6 29 40.5 19 44.5 Z" fill="#ffd76b" opacity="0.4"/>
+  <path d="M64 45 C80 45 96 46 110 50 C96 48 80 47.5 64 47.5 C48 47.5 32 48 18 50 C32 46 48 45 64 45 Z" fill="#17130f" opacity="0.55"/>
+
+  <!-- hat crown -->
+  <path d="M36 44 C34 30 40 16 52 13 C56 15 60 16 64 16 C68 16 72 15 76 13 C88 16 94 30 92 44 C83 40 73 38 64 38 C55 38 45 40 36 44 Z" fill="url(#prospector-hat)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M38 42 C37 30 42 19 51 15.5 L54 17 C46 21 42 31 42 41 Z" fill="#ffb545" opacity="0.45"/>
+  <path d="M64 16 C68 16 72 15 76 13 C80 14 83 17 86 21 C79 19 71 19.5 64 19.5 C60 19.5 56 19 52 13 C56 15 60 16 64 16 Z" fill="#2e1f12" opacity="0.5"/>
+  <path d="M64 16 L64 38" stroke="#0a0806" stroke-width="1.5" opacity="0.4" fill="none"/>
+  <!-- hatband -->
+  <path d="M37 39 C46 35.5 55 34 64 34 C73 34 82 35.5 91 39 L92 44 C83 40 73 38 64 38 C55 38 45 40 36 44 Z" fill="#17130f" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+
+  <!-- candle-lamp glow -->
+  <circle cx="64" cy="24" r="15" fill="url(#prospector-glow)"/>
+
+  <!-- lamp bracket + candle + flame -->
+  <path d="M57 32 L71 32 L69 40 L59 40 Z" fill="url(#prospector-brass)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M58 33 L63 33 L62.5 39 L59.5 39 Z" fill="#ecc069" opacity="0.7"/>
+  <path d="M60.5 25 L67.5 25 L67 33 L61 33 Z" fill="#e8dcc8" stroke="#0a0806" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M61.2 26 L63.4 26 L63.1 32.4 L61.4 32.4 Z" fill="#fbf6ea" opacity="0.9"/>
+  <path d="M64 15 C66.4 18 67.6 20.4 67.6 22.6 C67.6 25 66 26.4 64 26.4 C62 26.4 60.4 25 60.4 22.6 C60.4 20.4 61.6 18 64 15 Z" fill="url(#prospector-flame)" stroke="#0a0806" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M64 19 C65.2 20.6 65.7 21.8 65.7 22.9 C65.7 24.2 64.9 24.9 64 24.9 C63.1 24.9 62.3 24.2 62.3 22.9 C62.3 21.8 62.8 20.6 64 19 Z" fill="#fff3c4"/>
+</svg>

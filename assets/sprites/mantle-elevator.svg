@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="mantle-elevator-rock" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#211b15"/>
+      <stop offset="0.55" stop-color="#17130f"/>
+      <stop offset="1" stop-color="#0d0b09"/>
+    </linearGradient>
+    <linearGradient id="mantle-elevator-shaft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#17130f"/>
+      <stop offset="0.5" stop-color="#241209"/>
+      <stop offset="0.78" stop-color="#6e2c14"/>
+      <stop offset="1" stop-color="#ff7847"/>
+    </linearGradient>
+    <radialGradient id="mantle-elevator-glow" cx="0.5" cy="0.72" r="0.62">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.45" stop-color="#ff7847"/>
+      <stop offset="1" stop-color="#ff7847" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mantle-elevator-brass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd76b"/>
+      <stop offset="0.45" stop-color="#c9973f"/>
+      <stop offset="1" stop-color="#7a5a26"/>
+    </linearGradient>
+    <linearGradient id="mantle-elevator-timber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6b4a2f"/>
+      <stop offset="1" stop-color="#402c1b"/>
+    </linearGradient>
+    <radialGradient id="mantle-elevator-cagelight" cx="0.5" cy="0.85" r="0.9">
+      <stop offset="0" stop-color="#ff7847" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#c9973f" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#17130f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mantle-elevator-wheel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9aa0a8"/>
+      <stop offset="0.5" stop-color="#6e6a6a"/>
+      <stop offset="1" stop-color="#484d54"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ground-contact shadow -->
+  <ellipse cx="64" cy="122" rx="46" ry="6" fill="#000" opacity="0.35"/>
+
+  <!-- rock cutaway slab -->
+  <path d="M18 12 L110 12 L114 20 L114 116 L108 122 L20 122 L14 114 L14 18 Z"
+        fill="url(#mantle-elevator-rock)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- rock facets, left wall -->
+  <polygon points="14,18 44,20 44,44 14,40" fill="#211b15"/>
+  <polygon points="14,40 44,44 44,72 14,76" fill="#17130f"/>
+  <polygon points="14,76 44,72 44,102 20,122 14,114" fill="#0d0b09"/>
+  <polyline points="14,40 44,44" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <polyline points="14,76 44,72" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <!-- rock facets, right wall -->
+  <polygon points="84,20 114,20 114,52 84,48" fill="#1c1610"/>
+  <polygon points="84,48 114,52 114,86 84,82" fill="#120e0b"/>
+  <polygon points="84,82 114,86 114,116 108,122 84,106" fill="#0d0b09"/>
+  <polyline points="84,48 114,52" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <polyline points="84,82 114,86" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+  <!-- amber rim light on upper-left rock edge -->
+  <path d="M18 12 L110 12" fill="none" stroke="#ffd76b" stroke-width="2" opacity="0.8" stroke-linecap="round"/>
+  <path d="M18 13 L14 18 L14 60" fill="none" stroke="#ffb545" stroke-width="2" opacity="0.55" stroke-linecap="round"/>
+
+  <!-- shaft interior -->
+  <path d="M44 20 L84 20 L84 106 L64 118 L44 102 Z"
+        fill="url(#mantle-elevator-shaft)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- mantle glow -->
+  <ellipse cx="64" cy="104" rx="26" ry="26" fill="url(#mantle-elevator-glow)"/>
+  <!-- molten facets at shaft floor -->
+  <polygon points="46,104 56,96 64,106 54,112" fill="#ff7847"/>
+  <polygon points="56,96 70,98 64,106" fill="#ffb545"/>
+  <polygon points="70,98 82,104 72,112 64,106" fill="#ff7847"/>
+  <polygon points="58,106 64,102 70,108 64,113" fill="#ffd76b"/>
+  <polyline points="46,104 82,104" fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- timber shaft guides -->
+  <rect x="42" y="18" width="5" height="88" fill="url(#mantle-elevator-timber)" stroke="#0a0806" stroke-width="1.5" opacity="0.9"/>
+  <rect x="81" y="18" width="5" height="88" fill="#402c1b" stroke="#0a0806" stroke-width="1.5" opacity="0.9"/>
+  <path d="M42.5 20 L42.5 70" fill="none" stroke="#ffb545" stroke-width="1.5" opacity="0.45"/>
+
+  <!-- headframe beam -->
+  <path d="M36 14 L92 14 L94 24 L34 24 Z" fill="url(#mantle-elevator-timber)"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M37 15 L91 15" fill="none" stroke="#ffd76b" stroke-width="1.8" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- winch wheel -->
+  <circle cx="64" cy="19" r="9" fill="url(#mantle-elevator-wheel)" stroke="#0a0806" stroke-width="3"/>
+  <path d="M64 12 L64 26 M57.5 19 L70.5 19 M59.5 14.5 L68.5 23.5 M68.5 14.5 L59.5 23.5"
+        fill="none" stroke="#0a0806" stroke-width="1.5" opacity="0.55"/>
+  <circle cx="64" cy="19" r="2.6" fill="url(#mantle-elevator-brass)" stroke="#0a0806" stroke-width="1.5"/>
+  <path d="M57 14 A9 9 0 0 1 64 10.5" fill="none" stroke="#ffd76b" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+
+  <!-- cable -->
+  <path d="M64 28 L64 40" fill="none" stroke="#0a0806" stroke-width="4" stroke-linecap="round"/>
+  <path d="M64 28 L64 40" fill="none" stroke="#9aa0a8" stroke-width="1.6" stroke-linecap="round"/>
+
+  <!-- cage interior glow (light rising from below through floor) -->
+  <path d="M50 52 Q50 40 64 40 Q78 40 78 52 L78 88 L50 88 Z" fill="#17130f"/>
+  <path d="M50 52 Q50 40 64 40 Q78 40 78 52 L78 88 L50 88 Z" fill="url(#mantle-elevator-cagelight)"/>
+
+  <!-- lattice: cross braces -->
+  <path d="M50 58 L78 74 M78 58 L50 74 M50 74 L78 88 M78 74 L50 88"
+        fill="none" stroke="#c9973f" stroke-width="2"/>
+  <!-- lattice: vertical bars -->
+  <path d="M57 44 L57 88 M64 41 L64 88 M71 44 L71 88" fill="none" stroke="#0a0806" stroke-width="3.5"/>
+  <path d="M57 44 L57 88 M64 41 L64 88 M71 44 L71 88" fill="none" stroke="#c9973f" stroke-width="1.6"/>
+  <!-- mid rail -->
+  <path d="M50 58 L78 58" fill="none" stroke="#0a0806" stroke-width="3"/>
+  <path d="M50 58 L78 58" fill="none" stroke="url(#mantle-elevator-brass)" stroke-width="1.6"/>
+
+  <!-- brass cage frame: arch + sides -->
+  <path d="M50 88 L50 52 Q50 40 64 40 Q78 40 78 52 L78 88"
+        fill="none" stroke="#0a0806" stroke-width="6.5" stroke-linejoin="round"/>
+  <path d="M50 88 L50 52 Q50 40 64 40 Q78 40 78 52 L78 88"
+        fill="none" stroke="url(#mantle-elevator-brass)" stroke-width="3.4" stroke-linejoin="round"/>
+  <!-- arch rim light upper-left -->
+  <path d="M51.5 54 Q51.5 42 63 41.5" fill="none" stroke="#ffd76b" stroke-width="1.8" opacity="0.9" stroke-linecap="round"/>
+
+  <!-- cage floor plate -->
+  <path d="M47 88 L81 88 L83 94 L45 94 Z" fill="url(#mantle-elevator-brass)"
+        stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M48 89 L80 89" fill="none" stroke="#ffd76b" stroke-width="1.5" opacity="0.75"/>
+  <!-- floor under-shadow -->
+  <path d="M46 94 L82 94 L80 98 L48 98 Z" fill="#0d0b09" opacity="0.8"/>
+
+  <!-- crown finial -->
+  <circle cx="64" cy="38" r="3.4" fill="url(#mantle-elevator-brass)" stroke="#0a0806" stroke-width="2"/>
+  <circle cx="62.8" cy="36.8" r="1" fill="#ffd76b"/>
+
+  <!-- ornament scrolls on arch shoulders -->
+  <path d="M52 50 Q55 46 59 45.5" fill="none" stroke="#ffb545" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <path d="M76 50 Q73 46 69 45.5" fill="none" stroke="#7a5a26" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+
+  <!-- tiny gem seams in rock, catching lantern light -->
+  <polygon points="24,58 28,55 30,60 25,62" fill="#b07cff" stroke="#0a0806" stroke-width="1.5"/>
+  <polygon points="98,64 103,62 105,67 100,69" fill="#3ecf8e" stroke="#0a0806" stroke-width="1.5"/>
+  <polygon points="27,92 31,90 32,95 28,96" fill="#ff5d73" stroke="#0a0806" stroke-width="1.5"/>
+  <circle cx="26" cy="57.5" r="0.9" fill="#e8dcc8" opacity="0.9"/>
+  <circle cx="100.5" cy="63.5" r="0.9" fill="#e8dcc8" opacity="0.9"/>
+
+  <!-- ember sparks rising -->
+  <circle cx="54" cy="92" r="1.4" fill="#ffb545"/>
+  <circle cx="74" cy="97" r="1.2" fill="#ff7847"/>
+  <circle cx="68" cy="86" r="1" fill="#ffd76b"/>
+</svg>

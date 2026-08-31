@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEEPVEIN — an idle mining saga</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 26 L20 12 l4 4 L10 30 z' fill='%23a06a3a'/%3E%3Cpath d='M14 4 q8 -2 14 6 q-6 -3 -11 1 l-3 3 -4 -4 z' fill='%23c9c2b8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rye&family=Bitter:ital,wght@0,400;0,600;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="grain" aria-hidden="true"></div>
+
+<div id="game">
+
+  <!-- ============ LEFT : THE FACE (clicker) ============ -->
+  <aside id="faceCol">
+    <header id="masthead">
+      <div class="mast-rule"></div>
+      <h1 class="logo">DEEPVEIN</h1>
+      <p class="tagline">EST. 1849 &mdash; THE MOTHERLODE AWAITS</p>
+      <div class="mast-rule"></div>
+    </header>
+
+    <div id="counterPlate">
+      <div id="oreCount">0</div>
+      <div id="oreLabel">ore</div>
+      <div id="cpsCount">per second: 0</div>
+    </div>
+
+    <div id="boulderZone">
+      <div id="lanternGlow" aria-hidden="true"></div>
+      <div id="strata" aria-hidden="true"></div>
+
+      <!-- ======= HERO BOULDER (hand-cut, evolves with progress) ======= -->
+      <svg id="boulder" viewBox="0 0 400 400" role="button" aria-label="Mine the boulder" tabindex="0">
+        <defs>
+          <radialGradient id="bgGlow" cx="50%" cy="42%" r="60%">
+            <stop offset="0%"  stop-color="var(--vein)" stop-opacity="0.35"/>
+            <stop offset="60%" stop-color="var(--vein)" stop-opacity="0.06"/>
+            <stop offset="100%" stop-color="var(--vein)" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="rockTop" x1="0" y1="0" x2="0.4" y2="1">
+            <stop offset="0%"  stop-color="var(--rock-hi)"/>
+            <stop offset="100%" stop-color="var(--rock-mid)"/>
+          </linearGradient>
+          <linearGradient id="rockLeft" x1="1" y1="0" x2="0" y2="0.8">
+            <stop offset="0%"  stop-color="var(--rock-mid)"/>
+            <stop offset="100%" stop-color="var(--rock-dark)"/>
+          </linearGradient>
+          <linearGradient id="rockRight" x1="0" y1="0" x2="1" y2="0.9">
+            <stop offset="0%"  stop-color="var(--rock-mid)"/>
+            <stop offset="100%" stop-color="var(--rock-deep)"/>
+          </linearGradient>
+          <linearGradient id="veinGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%"   stop-color="var(--vein-hi)"/>
+            <stop offset="50%"  stop-color="var(--vein)"/>
+            <stop offset="100%" stop-color="var(--vein-lo)"/>
+          </linearGradient>
+          <radialGradient id="gemGrad" cx="35%" cy="30%" r="80%">
+            <stop offset="0%"  stop-color="var(--gem-hi)"/>
+            <stop offset="55%" stop-color="var(--gem)"/>
+            <stop offset="100%" stop-color="var(--gem-lo)"/>
+          </radialGradient>
+        </defs>
+
+        <circle cx="200" cy="205" r="190" fill="url(#bgGlow)"/>
+
+        <!-- shadow -->
+        <ellipse cx="200" cy="356" rx="138" ry="22" fill="#000" opacity="0.45"/>
+
+        <g id="boulderBody">
+          <!-- main silhouette -->
+          <path d="M200 38 L286 74 L336 150 L330 246 L282 330 L196 356 L112 326 L68 240 L66 148 L118 72 Z"
+                fill="url(#rockLeft)" stroke="#0a0806" stroke-width="3" stroke-linejoin="round"/>
+          <!-- top facets -->
+          <path d="M200 38 L286 74 L252 140 L166 128 L118 72 Z" fill="url(#rockTop)"/>
+          <path d="M286 74 L336 150 L268 190 L252 140 Z" fill="url(#rockRight)"/>
+          <path d="M118 72 L166 128 L112 190 L66 148 Z" fill="url(#rockLeft)"/>
+          <!-- mid facets -->
+          <path d="M166 128 L252 140 L268 190 L206 236 L128 214 L112 190 Z" fill="url(#rockTop)" opacity="0.85"/>
+          <path d="M336 150 L330 246 L262 268 L268 190 Z" fill="url(#rockRight)" opacity="0.9"/>
+          <path d="M66 148 L112 190 L128 214 L96 268 L68 240 Z" fill="url(#rockLeft)" opacity="0.95"/>
+          <!-- lower facets -->
+          <path d="M128 214 L206 236 L262 268 L282 330 L196 356 L112 326 L96 268 Z" fill="url(#rockRight)" opacity="0.8"/>
+          <!-- facet seams -->
+          <g stroke="#0a0806" stroke-width="2" fill="none" opacity="0.55" stroke-linejoin="round">
+            <path d="M118 72 L166 128 L252 140 L286 74"/>
+            <path d="M166 128 L112 190 L128 214 L206 236 L268 190 L252 140"/>
+            <path d="M336 150 L268 190 M330 246 L262 268 L282 330 M262 268 L206 236"/>
+            <path d="M66 148 L112 190 M68 240 L96 268 L112 326 M96 268 L128 214"/>
+          </g>
+
+          <!-- ore veins -->
+          <g id="veins" stroke="url(#veinGrad)" fill="none" stroke-linecap="round">
+            <path d="M150 96 q26 18 20 44 q-6 28 18 40 q30 14 28 48" stroke-width="10" opacity="0.95"/>
+            <path d="M242 108 q-8 30 14 46 q24 18 12 52" stroke-width="7" opacity="0.85"/>
+            <path d="M104 200 q30 8 36 34 q6 26 34 34" stroke-width="8" opacity="0.9"/>
+            <path d="M282 232 q-18 22 -6 52" stroke-width="6" opacity="0.8"/>
+            <path d="M180 262 q-8 26 10 48" stroke-width="6" opacity="0.75"/>
+          </g>
+
+          <!-- nuggets / gem clusters -->
+          <g id="gems">
+            <path d="M158 152 l16 -10 14 12 -6 16 -20 2 z" fill="url(#gemGrad)" stroke="var(--gem-lo)" stroke-width="2"/>
+            <path d="M236 210 l14 -8 12 10 -5 14 -17 2 z" fill="url(#gemGrad)" stroke="var(--gem-lo)" stroke-width="2"/>
+            <path d="M136 258 l12 -7 10 9 -4 12 -15 1 z" fill="url(#gemGrad)" stroke="var(--gem-lo)" stroke-width="2"/>
+            <path d="M212 306 l11 -6 9 8 -4 11 -13 1 z" fill="url(#gemGrad)" stroke="var(--gem-lo)" stroke-width="2"/>
+            <path d="M263 148 l10 -6 9 8 -4 10 -12 1 z" fill="url(#gemGrad)" stroke="var(--gem-lo)" stroke-width="2"/>
+            <!-- sparkles -->
+            <g fill="var(--gem-hi)" class="sparkle">
+              <path d="M168 144 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 z"/>
+              <path d="M246 202 l2.5 7 7 2.5 -7 2.5 -2.5 7 -2.5 -7 -7 -2.5 7 -2.5 z"/>
+              <path d="M220 300 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z"/>
+            </g>
+          </g>
+
+          <!-- cracks appear as you click (revealed via JS) -->
+          <g id="cracks" stroke="#0a0806" stroke-width="3" fill="none" opacity="0" stroke-linecap="round">
+            <path d="M196 60 q10 30 -6 52 q-14 20 4 44"/>
+            <path d="M96 180 q28 16 30 44"/>
+            <path d="M300 200 q-22 12 -20 40"/>
+          </g>
+        </g>
+      </svg>
+
+      <div id="clickParticles" aria-hidden="true"></div>
+    </div>
+
+    <div id="buffBar"></div>
+
+    <div id="depthGauge">
+      <span class="gauge-label">STRATUM</span>
+      <span id="depthName">Topsoil</span>
+    </div>
+  </aside>
+
+  <!-- wraps the ledger + store so phones can swipe between them;
+       display:contents on wider screens keeps the three-column grid intact -->
+  <div id="lowerDeck">
+
+  <!-- ============ MIDDLE : THE LEDGER ============ -->
+  <main id="ledgerCol">
+    <div id="news"><span id="newsText">Welcome to the Deepvein Mining Co. Swing away.</span></div>
+
+    <nav id="tabs">
+      <button class="tab active" data-tab="holdings">Holdings</button>
+      <button class="tab" data-tab="stats">Ledger</button>
+      <button class="tab" data-tab="feats">Feats</button>
+      <button class="tab" data-tab="vault">The Vault</button>
+      <button class="tab" data-tab="options">Office</button>
+    </nav>
+
+    <section id="tab-holdings" class="tabpane active">
+      <div id="holdingsRows"></div>
+      <p id="holdingsEmpty" class="empty-note">Your claim is empty. Buy a pickaxe from the Company Store and get swinging.</p>
+    </section>
+
+    <section id="tab-stats" class="tabpane">
+      <h3 class="pane-title">Company Ledger</h3>
+      <dl id="statsList"></dl>
+    </section>
+
+    <section id="tab-feats" class="tabpane">
+      <h3 class="pane-title">Feats of Industry <span id="featCount"></span></h3>
+      <p class="pane-sub">Every feat raises canary morale, and happy canaries mean richer hauls.</p>
+      <div id="featGrid"></div>
+    </section>
+
+    <section id="tab-vault" class="tabpane">
+      <h3 class="pane-title">The Deep Vault</h3>
+      <div id="prestigePlate">
+        <div class="vault-row"><span class="vault-num" id="vaultDiamonds">0</span> <span class="vault-word">diamonds banked</span></div>
+        <div class="vault-row"><span class="vault-num" id="vaultLevel">0</span> <span class="vault-word">prestige level (<span id="vaultBonus">+0%</span> ore per second)</span></div>
+        <div class="vault-row small"><span id="vaultNext"></span></div>
+        <button id="descendBtn" disabled>DESCEND</button>
+        <p class="vault-note">Descending abandons this claim &mdash; ore, holdings and upgrades &mdash; in exchange for diamonds.
+        One prestige level per cube root of each trillion ore forfeited, exactly as the old bakers reckoned it.</p>
+      </div>
+      <h4 class="shelf-title">Vault Relics <span class="hint">(bought with diamonds, kept forever)</span></h4>
+      <div id="vaultShop"></div>
+    </section>
+
+    <section id="tab-options" class="tabpane">
+      <h3 class="pane-title">Front Office</h3>
+      <div id="optionsList">
+        <button id="saveBtn" class="office-btn">Save claim</button>
+        <button id="exportBtn" class="office-btn">Export save</button>
+        <button id="importBtn" class="office-btn">Import save</button>
+        <button id="soundBtn" class="office-btn">Sound: ON</button>
+        <button id="wipeBtn" class="office-btn danger">Abandon everything (wipe save)</button>
+      </div>
+      <p class="pane-sub">The claim autosaves every 30 seconds, and whenever you leave.</p>
+      <p class="pane-sub" id="verNote">DEEPVEIN v1.0 &mdash; scaling &amp; prestige after Orteil's Cookie Clicker.</p>
+    </section>
+  </main>
+
+  <!-- ============ RIGHT : COMPANY STORE ============ -->
+  <aside id="storeCol">
+    <header id="storeHead">
+      <h2>Company Store</h2>
+      <div id="buyBar">
+        <button class="qty active" data-qty="1">×1</button>
+        <button class="qty" data-qty="10">×10</button>
+        <button class="qty" data-qty="100">×100</button>
+        <button class="qty sell" data-qty="sell">SELL</button>
+      </div>
+    </header>
+
+    <div id="upgradeShelf">
+      <h4 class="shelf-title">Upgrades</h4>
+      <div id="upgradeRow"></div>
+    </div>
+
+    <div id="buildingList"></div>
+  </aside>
+
+  </div><!-- /lowerDeck -->
+
+</div>
+
+<div id="nuggetLayer"></div>
+<div id="toastStack"></div>
+<div id="tooltip" hidden></div>
+
+<script src="game.js"></script>
+</body>
+</html>
